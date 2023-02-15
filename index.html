@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
       body {
         display: flex;
         justify-content: center;
         align-items: center;
        
-        
       }
 
       .SIZE {
-        width: 320px;
+        width: 100%;
+        max-width: 320px;
         position: absolute;
       }
 
@@ -19,17 +20,25 @@
         position: relative;
         color: red;
         z-index: 3;
-        top: 400px;
+        top: 50%;
+        transform: translateY(-50%);
         text-align: center;
         font: 1em sans-serif;
-        margin-left: 3em;
       }
 
       .danger {
-        width: 40px;
+        width: 20%;
+        max-width: 40px;
         position: relative;
         z-index: 3;
-        top: 450px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      @media only screen and (max-width: 768px) {
+        .SIZE {
+          max-width: 100%;
+        }
       }
     </style>
   </head>
